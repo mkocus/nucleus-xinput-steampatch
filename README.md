@@ -4,6 +4,10 @@ XInput proxy DLL that filters controllers per game instance, surviving Steam ove
 
 Built for [Nucleus Co-op](https://github.com/SplitScreen-Me/splitscreenme-nucleus) split-screen scenarios where each instance should see only its assigned controller.
 
+## Quick How-To for NucleusCoop!
+
+Copy whole repo or just get `xinput1_3.dl_` files from x64/x86 dirs. Backup `NucleusCoop\utils\XInputPlus\x86` and `x64` dirs. Copy and replace those two files to `NucleusCoop\utils\XInputPlus\x86` and `x64` respectively.
+
 ## Problem
 
 When using XInputPlus-style proxy DLLs to separate controllers between game instances, **Steam overlay** (`gameoverlayrenderer.dll`) overwrites the proxy's `XInputGetState` export with a `JMP` detour to its own handler. Steam's handler calls the system `xinput1_4.dll` directly, completely bypassing the proxy's controller filtering. This causes all instances to respond to all controllers.
@@ -14,6 +18,8 @@ This happens even when the Steam overlay is disabled in Steam settings — the D
 
 | Approach | Why it fails |
 |---|---|
+| Using HidHide to hide duplicated controlers in system | No duplicated controlers in system, but input still goes to every instance |
+| Disabling Steam Input for the given game | No effect, still duplicated input |
 | Restoring original function bytes | Steam re-hooks immediately (every frame) |
 | Reading bytes from DLL on disk | The compiler emits JMP thunks — disk bytes are also JMPs |
 | Goldberg Steam Emulator | Bundled version too old for modern Steamworks SDK |
