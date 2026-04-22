@@ -4,6 +4,8 @@ XInput proxy DLL that filters controllers per game instance, surviving Steam ove
 
 Built for [Nucleus Co-op](https://github.com/SplitScreen-Me/splitscreenme-nucleus) split-screen scenarios where each instance should see only its assigned controller.
 
+Fixed issue emerged by latest Windows/Steam updates (circa 15.04.2026), where controller input goes to every Nucleus instance, regardless of settings or HidHide.
+
 ## Quick How-To for NucleusCoop!
 
 Copy whole repo or just get `xinput1_3.dl_` files from x64/x86 dirs. Backup `NucleusCoop\utils\XInputPlus\x86` and `x64` dirs. Copy and replace those two files to `NucleusCoop\utils\XInputPlus\x86` and `x64` respectively.
@@ -114,6 +116,7 @@ Instance folders are located at: `NucleusCoop\content\<GameName>\Instance0\`, `I
 - Terraria (XNA Framework 4.0, x86, xinput1_3) via Nucleus Co-op v2.4.1
 - Windows 11 Pro, Steam overlay enabled and disabled
 - Single physical Xbox controller, one instance keyboard+mouse / one controller
+- Single physical Playstation Dualsense/DualSense Edge + DS4Windows, one instance keyboard+mouse / one controller
 
 ### Architecture support
 
