@@ -1,0 +1,28 @@
+[12:25:51.553] === XInput Proxy DLL loaded ===
+[12:25:51.556] DLL path: C:\NucleusCoop\content\Terraria\Instance0\xinput1_3.dll
+[12:25:51.556] PID: 40220
+[12:25:51.556] INI path: C:\NucleusCoop\content\Terraria\Instance0\XInputPlus.ini
+[12:25:51.556] XInputPlus.ini found (attr=0x20)
+[12:25:51.557] Parsing INI [ControllerNumber]:
+[12:25:51.557]   Controller1 = 0 => g_map[0] = -1
+[12:25:51.557]   Controller2 = 0 => g_map[1] = -1
+[12:25:51.557]   Controller3 = 0 => g_map[2] = -1
+[12:25:51.558]   Controller4 = 0 => g_map[3] = -1
+[12:25:51.558] Loading real XInput DLL...
+[12:25:51.558] Loading real DLL from: C:\WINDOWS\system32\xinput1_4.dll
+[12:25:51.560] Real DLL loaded OK at 704A0000
+[12:25:51.560] GetState=704A8AA0 SetState=704A8D10 GetCaps=704A8F90 Enable=704A90A0 GetStateEx=704A8BF0
+[12:25:51.560] Proxy initialized successfully
+[12:25:51.561] Module check: gameoverlayrenderer=50720000
+[12:25:54.562] === Counter-hook check (3s after load) ===
+[12:25:54.562] XInputGetState at 300215C0, first bytes: E9 88 F0 B3 E1
+[12:25:54.562] Steam hooked XInputGetState -> 11B6064D, redirecting to our filter
+[12:25:54.562] Counter-hook installed! XInputGetState now -> our_hooked_getstate (300219E0)
+[12:25:54.563] Verify: JMP target is now 300219E0 (expected 300219E0)
+[12:25:54.563] Counter-hook installed for XInputGetStateEx
+[12:25:54.566] [HOOKED] XInputGetState(0) => DISCONNECTED (total=1)
+[12:25:54.567] [HOOKED] XInputGetState(1) => DISCONNECTED (total=2)
+[12:25:54.567] [HOOKED] XInputGetState(2) => DISCONNECTED (total=3)
+[12:25:54.567] [HOOKED] XInputGetState(3) => DISCONNECTED (total=4)
+[12:25:55.567] [HOOKED] XInputGetState(0) => DISCONNECTED (total=5)
+[12:26:54.595] Counter-hook monitor finished
